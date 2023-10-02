@@ -13,7 +13,8 @@ from frappe.model.document import Document
 from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
 from frappe.utils import cstr, flt, cint, nowdate, add_days, comma_and, now_datetime, ceil
 from erpnext.stock.report.stock_balance.stock_balance import execute
-from erpnext.buying.doctype.purchase_order.purchase_order import make_rm_stock_entry
+# from erpnext.buying.doctype.purchase_order.purchase_order import make_rm_stock_entry
+from erpnext.controllers.subcontracting_controller import make_rm_stock_entry
 from erpnext import get_default_company
 from erpnext.manufacturing.doctype.production_plan.production_plan import get_items_for_material_requests
 from erpnext.stock.doctype.item.item import get_uom_conv_factor

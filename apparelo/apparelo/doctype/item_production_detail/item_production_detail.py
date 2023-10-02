@@ -12,7 +12,7 @@ from apparelo.apparelo.doctype.ipd_item_mapping.ipd_item_mapping import ipd_item
 from apparelo.apparelo.doctype.ipd_bom_mapping.ipd_bom_mapping import ipd_bom_mapping
 from frappe.utils import comma_and,get_link_to_form
 from collections import Counter
-from frappe.core.page.background_jobs.background_jobs import get_info
+# from frappe.core.page.background_jobs.background_jobs import get_info
 from frappe.utils.background_jobs import enqueue
 from six import string_types
 
@@ -29,7 +29,8 @@ class ItemProductionDetail(Document):
 			return
 		self.validate_process_records()
 
-		enqueued_jobs = [d.get("job_name") for d in get_info()]
+		# enqueued_jobs = [d.get("job_name") for d in get_info()]
+		enqueued_jobs = [d.get("job_name") for d in []]
 		if self.name in enqueued_jobs:
 			frappe.throw(
 				_("Submission already in progress. Please wait for sometime.")
