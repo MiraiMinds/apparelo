@@ -1,6 +1,6 @@
 ## Apparelo
 
-Frappe application to manage the manufacturing workflows in the garment industry.
+1. Frappe application to manage the manufacturing workflows in the garment industry.
 
 Reach us out at hello@aerele.in to connect with our team.
 
